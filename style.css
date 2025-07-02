@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #202124;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 24px;
+  color: #4285f4;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.search-box {
+  flex: 1;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.nav {
+  display: flex;
+  gap: 15px;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav div {
+  color: #1a0dab;
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  padding: 20px;
+}
+
+.results {
+  flex: 2;
+}
+
+.result {
+  margin-bottom: 20px;
+}
+
+.result a {
+  font-size: 18px;
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+.result p {
+  margin: 5px 0;
+  color: #4d5156;
+}
+
+.panel {
+  flex: 1;
+  margin-left: 40px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+.panel img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.panel .info p {
+  margin: 6px 0;
+}
