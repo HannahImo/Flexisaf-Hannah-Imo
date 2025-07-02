@@ -1,51 +1,43 @@
- // =============================
-// 🎨 Variables
-// =============================
+ // Variables
 $primary-color: #4285f4;
 $text-color: #202124;
 $link-hover-color: #1a73e8;
 
-// =============================
-// 🌐 Base Styles
-// =============================
+// Base
 body {
   font-family: Arial, sans-serif;
-  background-color: #fff;
+  background: #fff;
   color: $text-color;
   margin: 0;
   padding: 0;
 }
 
-// =============================
-// 🔝 Header
-// =============================
+// Header
 .header {
-  background: $primary-color;
-  padding: 10px;
   display: flex;
   align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
 
   .logo {
-    color: white;
+    font-size: 24px;
+    color: $primary-color;
+    margin-right: 10px;
     font-weight: bold;
-    font-size: 20px;
-    margin-right: 20px;
   }
 
   .search-box {
+    flex: 1;
+
     input {
-      padding: 8px 12px;
-      font-size: 14px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      width: 300px;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
     }
   }
 }
 
-// =============================
-// 📍 Left Sidebar
-// =============================
+// Left Sidebar
 .left-column {
   width: 120px;
   padding: 1rem 0.5rem;
@@ -75,9 +67,7 @@ body {
   }
 }
 
-// =============================
-// 📃 Main Results
-// =============================
+// Main Results
 .main-results {
   margin-left: 140px;
   padding: 20px;
@@ -89,11 +79,11 @@ body {
     margin-bottom: 20px;
 
     div {
+      color: $link-hover-color;
       cursor: pointer;
 
       &:hover {
         text-decoration: underline;
-        color: $link-hover-color;
       }
     }
   }
@@ -103,9 +93,9 @@ body {
       margin-bottom: 20px;
 
       a {
+        font-size: 18px;
         color: $primary-color;
         text-decoration: none;
-        font-weight: bold;
 
         &:hover {
           text-decoration: underline;
@@ -113,16 +103,14 @@ body {
       }
 
       p {
-        font-size: 14px;
-        color: #333;
+        margin: 5px 0;
+        color: #4d5156;
       }
     }
   }
 }
 
-// =============================
-// 📌 Right Panel
-// =============================
+// Right Panel
 .right-panel {
   position: fixed;
   right: 20px;
@@ -133,18 +121,11 @@ body {
 .panel {
   background: #fff;
   padding: 20px;
-  border: 1px solid #dadce0;
+  border: 1px solid #ddd;
   border-radius: 8px;
 
   h2 {
-    font-size: 20px;
-    margin-bottom: 0.25rem;
-  }
-
-  p {
-    font-size: 14px;
-    color: #555;
-    margin: 0.5rem 0;
+    margin-top: 0;
   }
 
   .image-grid {
@@ -180,9 +161,7 @@ body {
   }
 }
 
-// =============================
-// 📎 Footer
-// =============================
+// Footer
 .page-footer {
   position: fixed;
   bottom: 0;
@@ -209,4 +188,3 @@ body {
     }
   }
 }
-// =============================
