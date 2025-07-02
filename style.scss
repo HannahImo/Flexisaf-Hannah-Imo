@@ -1,21 +1,51 @@
+ // =============================
+// 🎨 Variables
+// =============================
 $primary-color: #4285f4;
+$text-color: #202124;
+$link-hover-color: #1a73e8;
 
+// =============================
+// 🌐 Base Styles
+// =============================
 body {
   font-family: Arial, sans-serif;
   background-color: #fff;
-  color: #202124;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
 
-  .header {
-    background: $primary-color;
-    padding: 10px;
+// =============================
+// 🔝 Header
+// =============================
+.header {
+  background: $primary-color;
+  padding: 10px;
+  display: flex;
+  align-items: center;
 
-    .logo {
-      color: white;
-      font-weight: bold;
+  .logo {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 20px;
+  }
+
+  .search-box {
+    input {
+      padding: 8px 12px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 300px;
     }
   }
 }
 
+// =============================
+// 📍 Left Sidebar
+// =============================
 .left-column {
   width: 120px;
   padding: 1rem 0.5rem;
@@ -35,7 +65,7 @@ body {
 
       &.active {
         font-weight: bold;
-        color: #1a73e8;
+        color: $link-hover-color;
       }
 
       &:hover {
@@ -45,6 +75,114 @@ body {
   }
 }
 
+// =============================
+// 📃 Main Results
+// =============================
+.main-results {
+  margin-left: 140px;
+  padding: 20px;
+
+  .nav {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    margin-bottom: 20px;
+
+    div {
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+        color: $link-hover-color;
+      }
+    }
+  }
+
+  .results {
+    .result {
+      margin-bottom: 20px;
+
+      a {
+        color: $primary-color;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        color: #333;
+      }
+    }
+  }
+}
+
+// =============================
+// 📌 Right Panel
+// =============================
+.right-panel {
+  position: fixed;
+  right: 20px;
+  top: 100px;
+  width: 350px;
+}
+
+.panel {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    font-size: 14px;
+    color: #555;
+    margin: 0.5rem 0;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin: 10px 0;
+
+    img {
+      width: 100%;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 6px;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .info {
+    margin-top: 15px;
+
+    p {
+      font-size: 13px;
+      line-height: 1.6;
+
+      strong {
+        color: #333;
+      }
+    }
+  }
+}
+
+// =============================
+// 📎 Footer
+// =============================
 .page-footer {
   position: fixed;
   bottom: 0;
@@ -71,43 +209,4 @@ body {
     }
   }
 }
-
-
-
-.panel {
-  background: #fff;
-  padding: 20px;
-  border: 1px solid #dadce0;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 350px;
-
-  h2 {
-    font-size: 20px;
-    margin-bottom: 0.25rem;
-  }
-
-  p {
-    font-size: 14px;
-    color: #555;
-    margin: 0.5rem 0;
-  }
-
-  // ✅ Image grid
-  img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin: 5px;
-    border-radius: 8px;
-    transition: transform 0.2s ease;
-
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
-
-  .info {
-    margin-top: 15px;
-  }
-}
+// =============================
