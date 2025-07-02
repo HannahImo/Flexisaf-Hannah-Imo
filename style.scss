@@ -163,7 +163,7 @@ body {
 
 // Footer
 .page-footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   font-size: 13px;
@@ -173,6 +173,7 @@ body {
   padding: 10px 20px;
   color: #70757a;
   border-top: 1px solid #dadce0;
+  margin-top: 40px;
 
   .footer-links {
     display: flex;
