@@ -1,0 +1,17 @@
+$primary-color: #4285f4;
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #202124;
+
+  .header {
+    background: $primary-color;
+    padding: 10px;
+
+    .logo {
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
