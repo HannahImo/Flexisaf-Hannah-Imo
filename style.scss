@@ -15,3 +15,99 @@ body {
     }
   }
 }
+
+.left-column {
+  width: 120px;
+  padding: 1rem 0.5rem;
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  top: 100px;
+  color: #5f6368;
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 1rem 0;
+      cursor: pointer;
+
+      &.active {
+        font-weight: bold;
+        color: #1a73e8;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.page-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  background: #f2f2f2;
+  padding: 10px 20px;
+  color: #70757a;
+  border-top: 1px solid #dadce0;
+
+  .footer-links {
+    display: flex;
+    gap: 15px;
+
+    a {
+      color: #70757a;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+
+.panel {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 350px;
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    font-size: 14px;
+    color: #555;
+    margin: 0.5rem 0;
+  }
+
+  // ✅ Image grid
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 5px;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .info {
+    margin-top: 15px;
+  }
+}
