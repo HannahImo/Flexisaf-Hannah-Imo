@@ -1,19 +1,28 @@
- // Variables
 $primary-color: #4285f4;
 $text-color: #202124;
-$link-hover-color: #1a73e8;
+$link-color: #1a0dab;
+$gray: #70757a;
 
-// Base
-body {
-  font-family: Arial, sans-serif;
-  background: #fff;
-  color: $text-color;
-  margin: 0;
-  padding: 0;
+* {
+  box-sizing: border-box;
 }
 
-// Header
-.header {
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: $text-color;
+  background-color: #fff;
+}
+
+// Wrapper for content
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper {
   display: flex;
   align-items: center;
   padding: 10px 20px;
@@ -22,8 +31,8 @@ body {
   .logo {
     font-size: 24px;
     color: $primary-color;
-    margin-right: 10px;
     font-weight: bold;
+    margin-right: 15px;
   }
 
   .search-box {
@@ -37,14 +46,17 @@ body {
   }
 }
 
-// Left Sidebar
+.search-page {
+  display: flex;
+  flex: 1; // Take available vertical space
+  padding: 20px;
+}
+
+// Left navigation
 .left-column {
-  width: 120px;
-  padding: 1rem 0.5rem;
+  width: 140px;
+  padding-right: 10px;
   font-size: 14px;
-  position: fixed;
-  left: 0;
-  top: 100px;
   color: #5f6368;
 
   ul {
@@ -57,7 +69,7 @@ body {
 
       &.active {
         font-weight: bold;
-        color: $link-hover-color;
+        color: $primary-color;
       }
 
       &:hover {
@@ -67,19 +79,18 @@ body {
   }
 }
 
-// Main Results
+// Main content
 .main-results {
-  margin-left: 140px;
-  padding: 20px;
+  flex: 2;
 
   .nav {
     display: flex;
     gap: 15px;
-    font-size: 14px;
     margin-bottom: 20px;
+    font-size: 14px;
 
     div {
-      color: $link-hover-color;
+      color: $link-color;
       cursor: pointer;
 
       &:hover {
@@ -94,7 +105,7 @@ body {
 
       a {
         font-size: 18px;
-        color: $primary-color;
+        color: $link-color;
         text-decoration: none;
 
         &:hover {
@@ -110,51 +121,51 @@ body {
   }
 }
 
-// Right Panel
+// Right panel
 .right-panel {
-  position: fixed;
-  right: 20px;
-  top: 100px;
-  width: 350px;
-}
+  flex: 1;
+  margin-left: 40px;
 
-.panel {
-  background: #fff;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  .panel {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
 
-  h2 {
-    margin-top: 0;
-  }
-
-  .image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
-    margin: 10px 0;
-
-    img {
-      width: 100%;
-      height: 80px;
-      object-fit: cover;
-      border-radius: 6px;
-      transition: transform 0.2s ease;
-
-      &:hover {
-        transform: scale(1.05);
-      }
+    h2 {
+      margin-top: 0;
+      font-size: 20px;
     }
-  }
-
-  .info {
-    margin-top: 15px;
 
     p {
-      font-size: 13px;
-      line-height: 1.6;
+      margin: 6px 0;
+      font-size: 14px;
+      color: #444;
+    }
 
-      strong {
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      margin: 10px 0;
+
+      img {
+        width: 100%;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 6px;
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .info {
+      margin-top: 15px;
+
+      p strong {
         color: #333;
       }
     }
@@ -163,24 +174,22 @@ body {
 
 // Footer
 .page-footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  background: #f2f2f2;
+  border-top: 1px solid #dadce0;
   font-size: 13px;
+  color: $gray;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
-  background: #f2f2f2;
-  padding: 10px 20px;
-  color: #70757a;
-  border-top: 1px solid #dadce0;
-  margin-top: 40px;
+  flex-wrap: wrap;
+  margin-top: auto;
 
   .footer-links {
     display: flex;
     gap: 15px;
 
     a {
-      color: #70757a;
+      color: $gray;
       text-decoration: none;
 
       &:hover {
